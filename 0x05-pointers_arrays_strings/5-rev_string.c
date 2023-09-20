@@ -1,9 +1,9 @@
 #include "main.h"
 
- /**
-  * rev_string - is the function name
-  * @s: is the function parameter
-  */
+/**
+ * rev_string - is the function name
+ *  @s: is the function parameter
+ */
 
 void rev_string(char *s)
 {
