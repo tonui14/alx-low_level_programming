@@ -1,16 +1,17 @@
 #include <stdio.h>
 
+#define CONSTRUCTOR __attribute__((constructor))
+
 /**
- * bmain - function to be executed before main
- * It serves as a constructor and executes before main
- * function when program starts and outputs it to standard output
- *
- * Return: No return value
+ * myStartupFun - This function is executed before main
  **/
 
-void _attribute_((constructor)) bmain()
+void myStartupFun(void) CONSTRUCTOR;
+
+
+void myStartupFun(void)
 {
-	printf("You're beat! and yet, you must allow");
-	printf(",\nI bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
 
